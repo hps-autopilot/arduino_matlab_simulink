@@ -1,184 +1,90 @@
+#include <ArduinoBLE.h>
 #include <Arduino_LSM9DS1.h>
-#include <Arduino_LPS22HB.h>
-#include <Arduino_HTS221.h>
-#include <Arduino_APDS9960.h>
-//#include <AudioSound.h>
-#include <PDM.h>
 
-#include <stdio.h>
+ // BLE Battery Service
+BLEService batteryService ( " 180F " );
 
+// BLE Battery Level Characteristic
+BLEUnsignedCharCharacteristic batteryLevelChar("2A19",  // standard 16-bit characteristic UUID
+    BLERead | BLENotify); // remote clients will be able to get notifications if this characteristic changes
+
+int oldBatteryLevel = 0;  // last battery level reading from analog input
+long previousMillis = 0;  // last time the battery level was checked, in ms
 
 void setup() {
-  // put your setup code here, to run once:
-  //initialization 
-  Serial.begin(9600);
-  if (!IMU.begin()) {
-      Serial.println("Failed to initialize IMU!");
-      while (1);
-  }
+  Serial.begin(9600);    // initialize serial communication
+  while (!Serial);
 
-  if (!APDS.begin()) {
-    Serial.println("Error initializing APDS9960 sensor!");
-  }
+  pinMode(LED_BUILTIN, OUTPUT); // initialize the built-in LED pin to indicate when a central is connected
 
-  if (!HTS.begin()) {
-    Serial.println("Failed to initialize humidity temperature sensor!");
+  // begin initialization
+  if (!BLE.begin()) {
+    Serial.println("starting BLE failed!");
+
     while (1);
   }
-  // for setGestureSensitivity(..) a value between 1 and 100 is required.
-  // Higher values makes the gesture recognition more sensible but less accurate
-  // (a wrong gesture may be detected). Lower values makes the gesture recognition
-  // more accurate but less sensible (some gestures may be missed).
-  // Default is 80
-  //APDS.setGestureSensitivity(80);
 
-  //Serial.println("Detecting gestures ...");
+  /* Set a local name for the BLE device
+     This name will appear in advertising packets
+     and can be used by remote devices to identify this BLE device
+     The name can be changed but maybe be truncated based on space left in advertisement packet
+  */
+  BLE.setLocalName("BatteryMonitor");
+  BLE.setAdvertisedService(batteryService); // add the service UUID
+  batteryService.addCharacteristic(batteryLevelChar); // add the battery level characteristic
+  BLE.addService(batteryService); // Add the battery service
+  batteryLevelChar.writeValue(oldBatteryLevel); // set initial value for this characteristic
+
+  /* Start advertising BLE.  It will start continuously transmitting BLE
+     advertising packets and will be visible to remote BLE central devices
+     until it receives a new connection */
+
+  // start advertising
+  BECAME.advertise ();
+
+  Serial.println("Bluetooth device active, waiting for connections...");
 }
 
 void loop() {
+  // wait for a BLE central
+  BLEDevice central = BLE. central ();
 
-  // put your main code here, to run repeatedly:
-  delay(1000);
+  // if a central is connected to the peripheral:
+  if (central) {
+    Serial.print("Connected to central: ");
+    // print the central's BT address:
+    Serial.println(central.address());
+    // turn on the LED to indicate the connection:
+    digitalWrite(LED_BUILTIN, HIGH);
 
-  //pressure sensor
-  float pressure = BARO.readPressure();
-  Serial.print("Pressure = ");
-  Serial.print(pressure);
-  Serial.println(" kPa");
-
-  //IMU
-  float x, y, z;
-  if (IMU.accelerationAvailable()) {
-    IMU.readAcceleration(x, y, z);
-    //x is the long side angle , y is the short side angle, z is surface angle
-    Serial.print(F("x: "));
-    Serial.print(int(x*100)/100.0);
-    Serial.print(" \t");
-    Serial.print(F("y: "));
-    Serial.print(int(y*100)/100.0);
-    Serial.print(" \t");
-    Serial.print(F("z: "));
-    Serial.println(int(z*100)/100.0);  
-  }
-
-  float yaw, pitch, roll;
-
-  if (IMU.gyroscopeAvailable()) {
-    IMU.readGyroscope(roll, pitch, yaw);
-
-    Serial.print(F("roll: "));
-    Serial.print(roll);
-    Serial.print(" \t");
-    Serial.print(F("pitch: "));
-    Serial.print(pitch);
-    Serial.print(" \t");
-    Serial.print(F("yaw: "));
-    Serial.println(yaw);
-  }
-  
-  float mag_x, mag_y, mag_z;
-
-  if (IMU.magneticFieldAvailable()) {
-
-      IMU.readMagneticField(mag_x, mag_y, mag_z);
-      Serial.print(F("mag_x: ")); \
-      Serial.print(mag_x);
-      Serial.print(" \t");
-      Serial.print(F("mag_y: "));
-      Serial. print (mag_y);
-      Serial.print(" \t");
-      Serial.print(F("mag_z: "));
-      Series. print (mag_z);
-      Serial.println("uT");
-  }
-/*
-  //Gesture sensor
-  if (APDS.gestureAvailable()) {
-    // a gesture was detected, read and print to serial monitor
-    int gesture = APDS.readGesture();
-
-    switch (gesture) {
-      case GESTURE_UP:
-        Serial.println("Detected UP gesture");
-        break;
-
-      case GESTURE_DOWN:
-        Serial.println("Detected DOWN gesture");
-        break;
-
-      case GESTURE_LEFT:
-        Serial.println("Detected LEFT gesture");
-        break;
-
-      case GESTURE_RIGHT:
-        Serial.println("Detected RIGHT gesture");
-        break;
-
-      default:
-        // ignore
-        break;
+    // check the battery level every 200ms
+    // while the central is connected:
+    while (central.connected()) {
+      long currentMillis = millis();
+      // if 200ms have passed, check the battery level:
+      if (currentMillis - previousMillis >= 200) {
+        previousMillis = currentMillis;
+        updateBatteryLevel();
+      }
     }
+    // when the central disconnects, turn off the LED:
+    digitalWrite(LED_BUILTIN, LOW);
+    Serial.print("Disconnected from central: ");
+    Serial.println(central.address());
   }
-*/
-  //color sensor
-  while (! APDS.colorAvailable()) {
-    delay(5);
-  }
-  int r, g, b;
+}
 
-  // read the color
-  APDS.readColor(r, g, b);
-  // print the values
-  Serial.print("r = ");
-  Serial.println(r);
-  Serial.print("g = ");
-  Serial.println(g);
-  Serial.print("b = ");
-  Serial.println(b);
-/*
-  //proximity
-  if (APDS.proximityAvailable()) {
-    // read the proximity
-    // - 0   => close
-    // - 255 => far
-    // - -1  => error
-    int proximity = APDS.readProximity();
-    // print value to the Serial Monitor
-    Serial.println(proximity);
-  }
+void updateBatteryLevel() {
+  /* Read the current voltage level on the A0 analog input pin.
+     This is used here to simulate the charge level of a battery.
   */
+  int battery = analogRead(A0);
+  int batteryLevel = map(battery, 0, 1023, 0, 100);
 
-  //temperature
-  float temperature = HTS.readTemperature();
-  Serial.print("Temperature = ");
-  Serial.print(temperature);
-  Serial.println(" °C");
-
-  //humidity
-  float humidity    = HTS.readHumidity();
-  Serial.print("Humidity    = ");
-  Serial.print(humidity);
-  Serial.println(" %");
-  Serial.println();
-  /*
-  //Pulse Density Modulation
-  // buffer to read samples into, each sample is 16-bits
-  short sampleBuffer[256];
-  
-  // number of samples read
-  volatile int samplesRead;
-  
-  //…
-
-  // query the number of bytes available
-  int bytesAvailable = PDM.available();
-
-  // read into the sample buffer
-  int bytesRead = PDM.read(sampleBuffer, bytesAvailable);
-
-  // 16-bit, 2 bytes per sample
-  samplesRead = bytesRead / 2;
-  Serial.println(sampleBuffer);
-*/
-
+  if (batteryLevel != oldBatteryLevel) {      // if the battery level has changed
+    Serial.print("Battery Level % is now: "); // print it
+    Serial.println(batteryLevel);
+    batteryLevelChar.writeValue(batteryLevel);  // and update the battery level characteristic
+    oldBatteryLevel = batteryLevel;           // save the level for next comparison
+  }
 }
