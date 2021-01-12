@@ -1,0 +1,380 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b = 1
+b = 1
+b = 1
+b = 1
+b = 1
+b = 1
+b = 1
+b = 10
+b = 121
+b = 134
+b = 139
+b = 14
+b = 14
+b = 14
+b = 186
+b = 20
+b = 229
+b = 23
+b = 3
+b = 30
+b = 30
+b = 321
+b = 34
+b = 34
+b = 36
+b = 38
+b = 4
+b = 42
+b = 5
+b = 5
+b = 6
+b = 6
+b = 7
+b = 76
+b = 8
+b = 8
+b = 9
+b = 9
+g = 1
+g = 1
+g = 1
+g = 1
+g = 1
+g = 1
+g = 1
+g = 10
+g = 10
+g = 11
+g = 110
+g = 119
+g = 128
+g = 15
+g = 16
+g = 174
+g = 19
+g = 19
+g = 243
+g = 25
+g = 26
+g = 26
+g = 31
+g = 339
+g = 34
+g = 39
+g = 4
+g = 44
+g = 45
+g = 5
+g = 5
+g = 53
+g = 6
+g = 63
+g = 7
+g = 8
+g = 8
+g = 9
+Humidity    = 38.52 %
+Humidity    = 38.55 %
+Humidity    = 38.58 %
+Humidity    = 38.59 %
+Humidity    = 38.63 %
+Humidity    = 38.70 %
+Humidity    = 38.77 %
+Humidity    = 38.98 %
+Humidity    = 39.01 %
+Humidity    = 39.11 %
+Humidity    = 39.21 %
+Humidity    = 39.29 %
+Humidity    = 39.38 %
+Humidity    = 39.47 %
+Humidity    = 39.49 %
+Humidity    = 39.53 %
+Humidity    = 39.61 %
+Humidity    = 39.63 %
+Humidity    = 39.77 %
+Humidity    = 40.06 %
+Humidity    = 40.39 %
+Humidity    = 40.45 %
+Humidity    = 40.62 %
+Humidity    = 40.74 %
+Humidity    = 40.83 %
+Humidity    = 40.92 %
+Humidity    = 40.97 %
+Humidity    = 40.99 %
+Humidity    = 41.04 %
+Humidity    = 41.07 %
+Humidity    = 41.21 %
+Humidity    = 41.28 %
+Humidity    = 41.42 %
+Humidity    = 41.67 %
+Humidity    = 41.88 %
+Humidity    = 42.06 %
+Humidity    = 42.16 %
+Humidity    = 42.22 %
+Pressure = 100.82 kPa
+Pressure = 100.83 kPa
+Pressure = 100.83 kPa
+Pressure = 100.84 kPa
+Pressure = 100.84 kPa
+Pressure = 100.84 kPa
+Pressure = 100.84 kPa
+Pressure = 100.84 kPa
+Pressure = 100.84 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.85 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.86 kPa
+Pressure = 100.87 kPa
+Pressure = 100.88 kPa
+Pressure = 100.89 kPa
+Pressure = 100.89 kPa
+Pressure = 100.89 kPa
+Pressure = 100.89 kPa
+Pressure = 100.89 kPa
+Pressure = 100.90 kPa
+r = 10
+r = 11
+r = 11
+r = 14
+r = 14
+r = 14
+r = 14
+r = 14
+r = 153
+r = 16
+r = 2
+r = 2
+r = 2
+r = 2
+r = 2
+r = 2
+r = 2
+r = 220
+r = 23
+r = 24
+r = 25
+r = 33
+r = 35
+r = 357
+r = 36
+r = 46
+r = 49
+r = 62
+r = 7
+r = 7
+r = 74
+r = 75
+r = 8
+r = 8
+r = 82
+r = 87
+r = 97
+r = 98
+roll: -103.82 	pitch: -167.05 	yaw: 44.98
+roll: -12.45 	pitch: 13.98 	yaw: 24.60
+roll: -14.65 	pitch: -29.42 	yaw: 11.54
+roll: -16.97 	pitch: 16.30 	yaw: -1.28
+roll: -172.79 	pitch: -430.18 	yaw: -119.75
+roll: -1902.34 	pitch: -802.19 	yaw: 1549.26
+roll: -274.23 	pitch: 85.94 	yaw: 501.28
+roll: -28.44 	pitch: -150.70 	yaw: -127.93
+roll: -40.16 	pitch: -5.43 	yaw: 11.54
+roll: -47.97 	pitch: -120.42 	yaw: -2.93
+roll: -60.73 	pitch: -30.58 	yaw: -70.07
+roll: -65.19 	pitch: 495.36 	yaw: 464.36
+roll: -66.10 	pitch: 52.80 	yaw: -33.45
+roll: -81.48 	pitch: 245.00 	yaw: 128.36
+roll: -83.98 	pitch: -47.36 	yaw: 2.75
+roll: 0.00 	pitch: -0.67 	yaw: 0.24
+roll: 0.24 	pitch: -0.61 	yaw: 0.55
+roll: 0.37 	pitch: -0.37 	yaw: 0.31
+roll: 0.37 	pitch: -0.55 	yaw: 0.61
+roll: 0.43 	pitch: -0.61 	yaw: 0.37
+roll: 0.49 	pitch: -0.24 	yaw: 0.31
+roll: 0.49 	pitch: -0.61 	yaw: 1.28
+roll: 0.61 	pitch: -0.55 	yaw: 1.16
+roll: 13.85 	pitch: 78.86 	yaw: -5.31
+roll: 142.09 	pitch: 338.26 	yaw: -184.02
+roll: 16.54 	pitch: 24.54 	yaw: 84.66
+roll: 25.70 	pitch: -1059.63 	yaw: -25.57
+roll: 277.10 	pitch: 587.46 	yaw: -415.10
+roll: 313.29 	pitch: 546.94 	yaw: 450.68
+roll: 368.96 	pitch: -622.01 	yaw: -283.63
+roll: 38.94 	pitch: 69.21 	yaw: -168.70
+roll: 39.18 	pitch: 50.29 	yaw: -71.90
+roll: 53.16 	pitch: -116.70 	yaw: 33.75
+roll: 7.14 	pitch: 17.21 	yaw: -1.77
+roll: 71.72 	pitch: -22.77 	yaw: -5.37
+roll: 91.74 	pitch: -88.75 	yaw: 10.93
+roll: 94.48 	pitch: 429.02 	yaw: -56.88
+roll: 97.35 	pitch: 120.30 	yaw: -148.56
+Temperature = 27.11 °C
+Temperature = 27.11 °C
+Temperature = 27.12 °C
+Temperature = 27.14 °C
+Temperature = 27.16 °C
+Temperature = 27.18 °C
+Temperature = 27.23 °C
+Temperature = 27.23 °C
+Temperature = 27.23 °C
+Temperature = 27.25 °C
+Temperature = 27.37 °C
+Temperature = 27.50 °C
+Temperature = 27.62 °C
+Temperature = 27.68 °C
+Temperature = 27.75 °C
+Temperature = 27.84 °C
+Temperature = 27.84 °C
+Temperature = 27.87 °C
+Temperature = 27.89 °C
+Temperature = 27.91 °C
+Temperature = 27.96 °C
+Temperature = 28.00 °C
+Temperature = 28.07 °C
+Temperature = 28.20 °C
+Temperature = 28.36 °C
+Temperature = 28.37 °C
+Temperature = 28.50 °C
+Temperature = 28.62 °C
+Temperature = 28.64 °C
+Temperature = 28.71 °C
+Temperature = 28.73 °C
+Temperature = 28.77 °C
+Temperature = 28.79 °C
+Temperature = 28.82 °C
+Temperature = 28.82 °C
+Temperature = 28.84 °C
+Temperature = 28.89 °C
+Temperature = 28.91 °C
+x: -0.07 	y: -3.56 	z: 2.28
+x: -0.11 	y: 0.62 	z: 0.59
+x: -0.26 	y: -0.01 	z: -0.96
+x: -0.26 	y: -0.01 	z: -0.96
+x: -0.26 	y: -0.01 	z: -0.96
+x: -0.26 	y: -0.01 	z: -0.97
+x: -0.26 	y: 0.00 	z: -0.96
+x: -0.26 	y: 0.00 	z: -0.97
+x: -0.27 	y: -0.58 	z: -0.61
+x: -0.27 	y: 0.05 	z: -0.94
+x: -0.47 	y: -1.45 	z: 0.32
+x: -0.53 	y: 1.47 	z: -1.03
+x: -0.69 	y: 0.05 	z: 0.34
+x: -0.93 	y: 0.13 	z: 0.33
+x: -1.45 	y: 0.20 	z: 1.41
+x: -1.55 	y: 0.10 	z: 0.85
+x: -1.62 	y: -0.27 	z: 0.05
+x: -1.69 	y: 1.47 	z: -0.12
+x: -1.86 	y: 0.61 	z: 0.37
+x: -2.19 	y: 0.89 	z: -0.07
+x: -2.36 	y: 0.46 	z: 0.52
+x: -2.69 	y: 3.33 	z: -3.98
+x: -2.74 	y: 1.28 	z: -0.46
+x: -3.74 	y: 0.55 	z: 0.97
+x: -3.99 	y: 2.03 	z: -0.14
+x: -6.08 	y: 41.22 	z: -12.78uT
+x: -7.41 	y: 32.67 	z: -21.26uT
+x: 0.03 	y: -0.18 	z: 1.09
+x: 0.04 	y: -0.02 	z: 0.99
+x: 0.23 	y: -0.64 	z: -0.68
+x: 0.25 	y: -0.53 	z: 0.85
+x: 0.31 	y: -0.03 	z: 0.89
+x: 0.44 	y: -0.49 	z: 0.21
+x: 0.51 	y: 0.41 	z: 0.65
+x: 0.52 	y: 0.17 	z: 0.35
+x: 0.66 	y: 0.32 	z: -0.17
+x: 0.77 	y: 0.47 	z: -0.28
+x: 0.95 	y: 0.57 	z: -0.27
+x: 1.08 	y: 0.13 	z: 0.32
+x: 1.26 	y: -0.40 	z: -0.20
+x: 17.59 	y: 54.31 	z: 25.93uT
+x: 17.60 	y: 53.64 	z: 26.35uT
+x: 17.63 	y: 53.77 	z: 27.01uT
+x: 17.77 	y: 54.61 	z: 26.35uT
+x: 17.79 	y: 54.04 	z: 26.82uT
+x: 17.85 	y: 54.43 	z: 27.84uT
+x: 18.02 	y: 53.37 	z: 27.14uT
+x: 18.68 	y: -0.72 	z: -36.71uT
+x: 29.97 	y: 2.39 	z: -47.18uT
+x: 36.66 	y: 35.51 	z: -54.36uT
+x: 37.52 	y: -13.94 	z: -32.31uT
+x: 39.89 	y: 9.57 	z: -61.69uT
+x: 40.91 	y: 55.80 	z: 20.92uT
+x: 41.50 	y: -19.07 	z: -23.40uT
+x: 41.55 	y: 14.16 	z: -53.26uT
+x: 44.59 	y: -14.23 	z: 6.42uT
+x: 48.13 	y: 1.51 	z: -56.45uT
+x: 6.47 	y: 31.80 	z: 10.93uT
+x: 60.01 	y: -10.73 	z: -13.94uT
+x: 64.36 	y: 5.69 	z: 11.02uT
+x: 67.09 	y: -4.26 	z: -27.00uT
+x: 67.22 	y: -5.02 	z: -24.61uT
+x: 67.98 	y: -6.65 	z: -8.74uT
+x: 68.87 	y: 23.50 	z: -41.96uT
+x: 7.36 	y: 24.41 	z: -29.76uT
+x: 7.78 	y: 8.48 	z: -7.67uT
+x: 70.63 	y: 4.65 	z: -32.30uT
+x: 70.76 	y: 12.81 	z: 7.70uT
+x: 72.12 	y: 2.29 	z: -23.79uT
+x: 72.51 	y: 0.60 	z: -3.31uT
+x: 74.73 	y: 29.32 	z: -33.22uT
+x: 75.61 	y: 37.56 	z: -4.14uT
+x: 77.67 	y: 18.77 	z: -7.23uT
+x: 79.22 	y: 16.37 	z: -6.73uT
+x: 80.26 	y: 26.23 	z: -15.81uT
+x: 84.19 	y: 20.26 	z: -17.33uT
